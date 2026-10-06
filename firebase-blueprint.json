@@ -1,0 +1,414 @@
+{
+  "entities": {
+    "CompanySettings": {
+      "title": "CompanySettings",
+      "description": "Configuração da empresa emitente e parâmetros padrão de orçamento",
+      "type": "object",
+      "properties": {
+        "userId": {
+          "type": "string",
+          "description": "ID do usuário autenticado proprietário da empresa"
+        },
+        "name": {
+          "type": "string",
+          "description": "Nome fantasia da empresa",
+          "maxLength": 150
+        },
+        "tradeName": {
+          "type": "string",
+          "description": "Razão social da empresa",
+          "maxLength": 150
+        },
+        "cnpj": {
+          "type": "string",
+          "description": "CNPJ da empresa",
+          "maxLength": 30
+        },
+        "ie": {
+          "type": "string",
+          "description": "Inscrição Estadual",
+          "maxLength": 30
+        },
+        "phone": {
+          "type": "string",
+          "description": "Telefone fixo ou comercial",
+          "maxLength": 30
+        },
+        "whatsapp": {
+          "type": "string",
+          "description": "WhatsApp para contato e envio de orçamentos",
+          "maxLength": 30
+        },
+        "email": {
+          "type": "string",
+          "description": "E-mail comercial",
+          "maxLength": 100
+        },
+        "website": {
+          "type": "string",
+          "description": "Website ou rede social",
+          "maxLength": 150
+        },
+        "cep": {
+          "type": "string",
+          "description": "CEP da empresa",
+          "maxLength": 20
+        },
+        "address": {
+          "type": "string",
+          "description": "Logradouro da empresa",
+          "maxLength": 200
+        },
+        "number": {
+          "type": "string",
+          "description": "Número do endereço",
+          "maxLength": 30
+        },
+        "complement": {
+          "type": "string",
+          "description": "Complemento",
+          "maxLength": 100
+        },
+        "neighborhood": {
+          "type": "string",
+          "description": "Bairro",
+          "maxLength": 100
+        },
+        "city": {
+          "type": "string",
+          "description": "Cidade base da empresa",
+          "maxLength": 100
+        },
+        "state": {
+          "type": "string",
+          "description": "Estado (UF)",
+          "maxLength": 10
+        },
+        "logoUrl": {
+          "type": "string",
+          "description": "URL ou base64 do logotipo",
+          "maxLength": 500000
+        },
+        "responsibleName": {
+          "type": "string",
+          "description": "Nome do responsável técnico ou comercial",
+          "maxLength": 120
+        },
+        "responsibleRole": {
+          "type": "string",
+          "description": "Cargo do responsável",
+          "maxLength": 100
+        },
+        "defaultMargin": {
+          "type": "number",
+          "description": "Margem de lucro padrão em porcentagem (ex: 20)"
+        },
+        "defaultHourlyRate": {
+          "type": "number",
+          "description": "Valor da hora de mão de obra de referência em R$"
+        },
+        "defaultDisplacementFee": {
+          "type": "number",
+          "description": "Taxa de deslocamento padrão em R$"
+        },
+        "defaultTaxPercent": {
+          "type": "number",
+          "description": "Percentual de impostos padrão"
+        },
+        "maxDiscountPercent": {
+          "type": "number",
+          "description": "Desconto máximo permitido em porcentagem"
+        },
+        "defaultExecutionDays": {
+          "type": "number",
+          "description": "Prazo padrão de execução em dias úteis"
+        },
+        "defaultValidityDays": {
+          "type": "number",
+          "description": "Prazo padrão de validade do orçamento em dias"
+        },
+        "marginApplication": {
+          "type": "string",
+          "description": "Aplicação da margem: 'total' ou 'materials_labor'",
+          "maxLength": 30
+        },
+        "paymentTerms": {
+          "type": "string",
+          "description": "Condições padrão de pagamento",
+          "maxLength": 500
+        },
+        "createdAt": {
+          "type": "string",
+          "description": "Data de criação ISO"
+        },
+        "updatedAt": {
+          "type": "string",
+          "description": "Data da última atualização ISO"
+        }
+      },
+      "required": ["userId", "name"]
+    },
+    "Client": {
+      "title": "Client",
+      "description": "Cadastro de cliente atendido pela empresa",
+      "type": "object",
+      "properties": {
+        "userId": {
+          "type": "string",
+          "description": "ID do usuário autenticado proprietário do cliente"
+        },
+        "name": {
+          "type": "string",
+          "description": "Nome ou Razão Social do cliente",
+          "maxLength": 150
+        },
+        "document": {
+          "type": "string",
+          "description": "CPF ou CNPJ",
+          "maxLength": 30
+        },
+        "company": {
+          "type": "string",
+          "description": "Nome da empresa do cliente caso seja PJ",
+          "maxLength": 150
+        },
+        "phone": {
+          "type": "string",
+          "description": "Telefone de contato",
+          "maxLength": 30
+        },
+        "whatsapp": {
+          "type": "string",
+          "description": "WhatsApp para envio de orçamentos",
+          "maxLength": 30
+        },
+        "email": {
+          "type": "string",
+          "description": "E-mail do cliente",
+          "maxLength": 100
+        },
+        "cep": {
+          "type": "string",
+          "description": "CEP do cliente",
+          "maxLength": 20
+        },
+        "address": {
+          "type": "string",
+          "description": "Logradouro do cliente",
+          "maxLength": 200
+        },
+        "number": {
+          "type": "string",
+          "description": "Número",
+          "maxLength": 30
+        },
+        "complement": {
+          "type": "string",
+          "description": "Complemento",
+          "maxLength": 100
+        },
+        "neighborhood": {
+          "type": "string",
+          "description": "Bairro",
+          "maxLength": 100
+        },
+        "city": {
+          "type": "string",
+          "description": "Cidade do cliente",
+          "maxLength": 100
+        },
+        "state": {
+          "type": "string",
+          "description": "Estado (UF)",
+          "maxLength": 10
+        },
+        "notes": {
+          "type": "string",
+          "description": "Observações sobre o cliente",
+          "maxLength": 2000
+        },
+        "createdAt": {
+          "type": "string",
+          "description": "Data de cadastro ISO"
+        },
+        "updatedAt": {
+          "type": "string",
+          "description": "Data de atualização ISO"
+        }
+      },
+      "required": ["userId", "name"]
+    },
+    "Budget": {
+      "title": "Budget",
+      "description": "Orçamento completo gerado por IA com materiais, mão de obra e fontes",
+      "type": "object",
+      "properties": {
+        "userId": {
+          "type": "string",
+          "description": "ID do usuário autenticado proprietário do orçamento"
+        },
+        "budgetNumber": {
+          "type": "string",
+          "description": "Código do orçamento (ex: ORC-2026-000001)",
+          "maxLength": 40
+        },
+        "title": {
+          "type": "string",
+          "description": "Título resumido do serviço",
+          "maxLength": 200
+        },
+        "promptDescription": {
+          "type": "string",
+          "description": "Comando inicial digitado pelo usuário",
+          "maxLength": 3000
+        },
+        "serviceDescription": {
+          "type": "string",
+          "description": "Descrição técnica detalhada do serviço gerada pela IA",
+          "maxLength": 4000
+        },
+        "serviceLocation": {
+          "type": "string",
+          "description": "Cidade e estado onde o serviço será realizado (ex: São Paulo - SP)",
+          "maxLength": 100
+        },
+        "clientId": {
+          "type": "string",
+          "description": "ID do cliente vinculado caso existente",
+          "maxLength": 100
+        },
+        "clientName": {
+          "type": "string",
+          "description": "Nome do cliente",
+          "maxLength": 150
+        },
+        "clientDocument": {
+          "type": "string",
+          "description": "CPF ou CNPJ do cliente",
+          "maxLength": 30
+        },
+        "clientPhone": {
+          "type": "string",
+          "description": "Telefone do cliente",
+          "maxLength": 30
+        },
+        "clientWhatsapp": {
+          "type": "string",
+          "description": "WhatsApp do cliente",
+          "maxLength": 30
+        },
+        "clientEmail": {
+          "type": "string",
+          "description": "E-mail do cliente",
+          "maxLength": 100
+        },
+        "clientAddress": {
+          "type": "string",
+          "description": "Endereço completo da obra/serviço",
+          "maxLength": 300
+        },
+        "status": {
+          "type": "string",
+          "description": "Status do orçamento",
+          "enum": ["draft", "sent", "pending", "approved", "rejected", "expired", "canceled"]
+        },
+        "items": {
+          "type": "array",
+          "description": "Lista de itens detalhados (materiais, mão de obra e outros custos)"
+        },
+        "sources": {
+          "type": "array",
+          "description": "Fontes de pesquisa de preço obtidas via Google Search Grounding"
+        },
+        "materialsSubtotal": {
+          "type": "number",
+          "description": "Subtotal de materiais em R$"
+        },
+        "laborSubtotal": {
+          "type": "number",
+          "description": "Subtotal de mão de obra em R$"
+        },
+        "displacementFee": {
+          "type": "number",
+          "description": "Taxa de deslocamento em R$"
+        },
+        "discount": {
+          "type": "number",
+          "description": "Valor de desconto em R$"
+        },
+        "additionalFees": {
+          "type": "number",
+          "description": "Taxas adicionais ou impostos em R$"
+        },
+        "profitMarginPercent": {
+          "type": "number",
+          "description": "Margem de lucro aplicada em %"
+        },
+        "profitMarginValue": {
+          "type": "number",
+          "description": "Valor monetário da margem em R$"
+        },
+        "total": {
+          "type": "number",
+          "description": "Valor total geral do orçamento em R$"
+        },
+        "executionDays": {
+          "type": "number",
+          "description": "Prazo estimado de execução em dias úteis"
+        },
+        "validityDays": {
+          "type": "number",
+          "description": "Validade da proposta em dias"
+        },
+        "paymentTerms": {
+          "type": "string",
+          "description": "Condições de pagamento",
+          "maxLength": 500
+        },
+        "notes": {
+          "type": "string",
+          "description": "Observações adicionais para o cliente",
+          "maxLength": 2000
+        },
+        "terms": {
+          "type": "string",
+          "description": "Termos e condições gerais da proposta",
+          "maxLength": 3000
+        },
+        "confidenceLevel": {
+          "type": "string",
+          "description": "Nível de confiança dos preços da IA: Alta, Média ou Baixa",
+          "enum": ["Alta", "Média", "Baixa"]
+        },
+        "responsibleName": {
+          "type": "string",
+          "description": "Nome do responsável da empresa emissora",
+          "maxLength": 120
+        },
+        "createdAt": {
+          "type": "string",
+          "description": "Data de criação ISO"
+        },
+        "updatedAt": {
+          "type": "string",
+          "description": "Data de atualização ISO"
+        }
+      },
+      "required": ["userId", "budgetNumber", "title", "total", "status"]
+    }
+  },
+  "firestore": {
+    "/users/{userId}/settings/{settingsId}": {
+      "schema": "CompanySettings",
+      "description": "Configurações e dados cadastrais da empresa pertencente ao usuário"
+    },
+    "/users/{userId}/clients/{clientId}": {
+      "schema": "Client",
+      "description": "Clientes cadastrados pela empresa do usuário"
+    },
+    "/users/{userId}/budgets/{budgetId}": {
+      "schema": "Budget",
+      "description": "Orçamentos emitidos e gerenciados pela empresa do usuário"
+    }
+  }
+}

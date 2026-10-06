@@ -1,0 +1,6 @@
+{
+  "name": "OrçaFácil IA",
+  "description": "Gerador profissional e inteligente de orçamentos de serviços com IA e pesquisa de preços no mercado brasileiro.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
